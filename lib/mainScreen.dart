@@ -17,10 +17,21 @@ class _MainscreenState extends State<Mainscreen> {
         centerTitle: true,
         title: Text('Lote Sa Yar'),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.add,
+          InkWell(
+            onTap: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      height: 250,
+                    );
+                  });
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(
+                Icons.add,
+              ),
             ),
           )
         ],

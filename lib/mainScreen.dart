@@ -24,7 +24,9 @@ class _MainscreenState extends State<Mainscreen> {
                   context: context,
                   builder: (context) {
                     return Container(
-                      height: 250,
+                      padding: EdgeInsets.all(20),
+                      height: 225,
+                      child: AddTodo(),
                     );
                   });
             },
@@ -37,7 +39,7 @@ class _MainscreenState extends State<Mainscreen> {
           )
         ],
       ),
-      body: AddTodo(),
+      body: Container(),
     );
   }
 }

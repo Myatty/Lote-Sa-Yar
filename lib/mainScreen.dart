@@ -12,9 +12,9 @@ class Mainscreen extends StatefulWidget {
 class _MainscreenState extends State<Mainscreen> {
   String text = 'Simple Text';
 
-  void changeText() {
+  void changeText({required String todoText}) {
     setState(() {
-      text = 'Text Changed';
+      text = '$todoText';
     });
   }
 

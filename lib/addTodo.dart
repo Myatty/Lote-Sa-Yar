@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AddTodo extends StatefulWidget {
-  void Function() changeText;
+
+  void Function({required String todoText}) changeText;
+
   AddTodo({super.key, required this.changeText});
 
   @override
@@ -31,7 +33,8 @@ class _AddTodoState extends State<AddTodo> {
           padding: const EdgeInsets.only(top: 15.0), // Add padding to the top
           child: ElevatedButton(
             onPressed: () {
-              widget.changeText();
+              widget.changeText(todoText: todoText.text);
+              todoText.clear();
             },
             child: Text("Lote ml"),
           ),
